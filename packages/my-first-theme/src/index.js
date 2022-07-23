@@ -1,5 +1,4 @@
-// File: /packages/my-first-theme/src/index.js
-
+import link from "@frontity/html2react/processors/link";
 import Root from "./components"
 
 const myFirstTheme = {
@@ -19,6 +18,11 @@ const myFirstTheme = {
       },
     },
   },
+  libraries: {
+    html2react: {
+      processors: [link]
+    }
+  }
 }
 
 export default myFirstTheme

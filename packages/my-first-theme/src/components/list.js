@@ -8,7 +8,8 @@ const List = ({ state, actions }) => {
   return (
     <Items>
       {data.items.map((item) => {
-        const post = state.source.post[item.id]
+        const post = state.source[item.type][item.id]
+
         return (
           <Link link={post.link} key={post.id}>
             {post.title.rendered}
